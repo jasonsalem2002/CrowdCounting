@@ -8,7 +8,7 @@ from tqdm import tqdm
 from PIL import Image
 
 import torch.nn.functional as F  # Import for GPU-compatible Gaussian filter
-device = torch.device("mps")  # Use "mps" for Metal Performance Shaders on M1
+device = torch.device("cuda")  # Use "mps" for Metal Performance Shaders on M1
 
 # Define a GPU-compatible Gaussian filter function
 def gaussian_filter_density_gpu(density):
@@ -20,7 +20,7 @@ def gaussian_filter_density_gpu(density):
         density = density.squeeze(0)  # Remove singleton batch dimension
 
     # Define the Gaussian kernel
-    kernel_size = 15  # Adjust kernel size as needed
+    kernel_size = 15 
     sigma = kernel_size / 6
     gaussian_kernel = torch.exp(-(torch.arange(kernel_size) - kernel_size // 2)**2 / (2 * sigma**2))
     gaussian_kernel = gaussian_kernel / gaussian_kernel.sum()
@@ -34,11 +34,11 @@ def gaussian_filter_density_gpu(density):
 
 def main():
     # Device configuration for Mac M1 GPU
-    device = torch.device("mps")  # Use "mps" for Metal Performance Shaders on M1
+    device = torch.device("cuda")  # Use "mps" for Metal Performance Shaders on M1
 
-    root = 'ShanghaiTech'  # Corrected directory name
-    part_A_train = os.path.join(root, 'part_A/train_data', 'images')
-    part_A_test = os.path.join(root, 'part_A/test_data', 'images')
+    root = 'ShanghaiTech'  
+    part_A_train = os.path.join(root, 'part_B/train_data', 'images')
+    part_A_test = os.path.join(root, 'part_B/test_data', 'images')
     path_sets = [part_A_train, part_A_test]
 
     for path in path_sets:

@@ -26,8 +26,7 @@ def train_model(model, train_loader, device, epochs=2):
             optimizer.step()
             epoch_loss += loss.item()
             
-            # Optional: Print loss every N mini-batches
-            if (batch_idx + 1) % 100 == 0:  # Assuming you want to log every 100 mini-batches
+            if (batch_idx + 1) % 100 == 0: 
                 print(f"Epoch: {epoch+1}, Batch: {batch_idx+1}, Loss: {loss.item()}")
 
         epoch_duration = time.time() - start_time
