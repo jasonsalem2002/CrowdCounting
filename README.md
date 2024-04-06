@@ -8,6 +8,9 @@ This repository presents a concise and efficient PyTorch implementation of the C
 
 ![Result](Results/Result.png)
 
+#### Next Goal 
+*Next goal is to test and implement the integration of CSRNet and IIM, aiming for enhanced crowd counting accuracy through improved image preprocessing. IIM Repository: [taohan10200/IIM](https://github.com/taohan10200/IIM)*
+
 **Key Features:**
 
 CSRNet Architecture: Leverages dilated convolutions for precise density estimation.
