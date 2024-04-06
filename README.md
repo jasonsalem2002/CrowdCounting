@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Crowd Counting with Simplified CSRNet Implementation
 
 ## Overview
@@ -70,3 +71,5 @@ Below are the visualizations of the results based on jpg images in the repositor
 - Original CSRNet Paper: [CSRNet: Dilated Convolutional Neural Networks for Understanding the Highly Congested Scenes](https://arxiv.org/abs/1802.10062)
 - Reference PyTorch Implementation: [CSRNet-pytorch](https://github.com/leeyeehoo/CSRNet-pytorch)
 
+=======
+>>>>>>> 980fe9711e29dc71365c2e2020ceac7b64992046
