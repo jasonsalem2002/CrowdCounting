@@ -57,12 +57,6 @@ Memory Optimization: Addresses GPU memory limitations during density map creatio
 - Employs initial 23 layers of pre-trained VGG16 for feature extraction.
 - Backend: Incorporates 6 convolutional layers with ReLU activations for density map generation.
 
-## Showcase Results
-
-Below are the visualizations of the results based on jpg images in the repository:
-
-*Insert showcase images here*
-
 ## Additional Information
 
 - `dataset.py` defines a custom dataset class for seamless data loading and preprocessing.
