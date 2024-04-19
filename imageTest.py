@@ -52,7 +52,7 @@ def count_crowd(image_path, model):
 
 if __name__ == '__main__':
     model = MSPSNet().to('cuda')
-    checkpoint = torch.load('checkpoint.pth.tar')
+    checkpoint = torch.load('checkpoint.pth')
     model.load_state_dict(checkpoint['state_dict'])
     model.eval()
     image_path = 'testImage.jpg'
